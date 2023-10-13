@@ -6,5 +6,5 @@ package lifeimitation
  * lifeImitation
  */
 
-open class Human(name: String = "Human"): InteractingObject(name)
+open class Human(name: String = "Human") : InteractingObject(name)
 

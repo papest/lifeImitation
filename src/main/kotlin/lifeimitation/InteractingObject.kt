@@ -14,5 +14,6 @@ package lifeimitation
 object Interact {
     fun InteractingObject.interact(value: InteractingObject) = println("$name interacting with ${value.name}")
 }
+
 open class InteractingObject(var name: String = "Object")
 

@@ -11,4 +11,4 @@ package lifeimitation
     "Papirova"
 )
 
-class Weather: InteractingObject("Weather")
+class Weather : InteractingObject("Weather"), GenerateEvent by EventsGenerator()
