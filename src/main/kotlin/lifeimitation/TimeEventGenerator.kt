@@ -9,7 +9,7 @@ import java.time.Period
  * lifeImitation
  */
 
-class TimeEvent(val name: String, val initTime: LocalDateTime, val period: Period, val generator: EventsGenerator)
+class TimeEvent(val name: String, val initTime: LocalDateTime, val period: Period, val generator: GenerateEvent)
 
 class EventsGenerator : GenerateEvent {
     var events = emptyList<TimeEvent>()
