@@ -6,5 +6,14 @@ package lifeimitation
  * lifeImitation
  */
 
-open class Human(name: String = "Human") : InteractingObject(name)
+open class Human(name: String = "Human") : InteractingObject(name) {
+    override fun interact(interactingObject: InteractingObject) {
+        println("$name greets ${interactingObject.name}")
+    }
 
+    fun interactEvents(eventsGenerator: EventsGenerator) {
+        eventsGenerator.events.forEach {
+            println("$name greets ${it.name}")
+        }
+    }
+}

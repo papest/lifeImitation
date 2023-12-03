@@ -8,18 +8,17 @@ import java.time.Period
  * @date 13.10.2023 18:06
  * lifeImitation
  */
-
-class TimeEvent(val name: String, val initTime: LocalDateTime, val period: Period, val generator: GenerateEvent)
+open class Event(val name: String, val generator: GenerateEvent)
+class TimeEvent(name: String, val initTime: LocalDateTime, val period: Period, generator: GenerateEvent) :
+    Event(name, generator)
 
 class EventsGenerator : GenerateEvent {
-    var events = emptyList<TimeEvent>()
-    override fun generateEvents(events: List<TimeEvent>) {
+    var events = emptyList<Event>()
+    override fun generateEvents(events: List<Event>) {
         this.events = events
     }
 }
 
 interface GenerateEvent {
-    fun generateEvents(events: List<TimeEvent>)
+    fun generateEvents(events: List<Event>)
 }
-
-

@@ -11,9 +11,8 @@ package lifeimitation
     "Papirova"
 )
 
-object Interact {
-    fun InteractingObject.interact(value: InteractingObject) = println("$name interacting with ${value.name}")
+
+abstract class InteractingObject(var name: String = "Object") {
+    open fun interact(interactingObject: InteractingObject) =
+        println("$name interacting with ${interactingObject.name}")
 }
-
-open class InteractingObject(var name: String = "Object")
-
